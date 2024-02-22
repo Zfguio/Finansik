@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Finansik.Components.NavBar">
     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-        <Button Margin="10" WidthRequest="100" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="Historia"/>
-        <Button Margin="10" WidthRequest="200" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="Podsumowanie"/>
-        <Button  Margin="10" WidthRequest="100" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="Dodaj"/>
+        <Button x:Name="BtnHistory" Margin="10" WidthRequest="100" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="History" Clicked="BtnHistory_Clicked"/>
+        <Button x:Name="BtnSummary" Margin="10" WidthRequest="200" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="Summary" Clicked="BtnSummary_Clicked"/>
+        <Button x:Name="BtnAdd" Margin="10" WidthRequest="100" BackgroundColor="#81689D" TextColor="#FFD0EC" Text="Add" Clicked="BtnAdd_Clicked"/>
     </StackLayout>
 </ContentView>
