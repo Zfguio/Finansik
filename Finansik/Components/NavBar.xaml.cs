@@ -17,11 +17,13 @@ public partial class NavBar : ContentView
 
     private void BtnSummary_Clicked(object sender, EventArgs e)
     {
-
+        var summaryView = new SummaryPage();    
+        Navigation.PushAsync(summaryView);
     }
 
     private void BtnAdd_Clicked(object sender, EventArgs e)
     {
-
+        var addView = new AddPage();    
+        Navigation.PushAsync(addView);
     }
 }

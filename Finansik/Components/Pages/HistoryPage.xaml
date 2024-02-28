@@ -7,7 +7,7 @@
     <VerticalStackLayout BackgroundColor="#474F7A">
         <local:NavBar/>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="History"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
