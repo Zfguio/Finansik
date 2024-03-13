@@ -1,9 +1,11 @@
 namespace Finansik.Components;
 
 using Finansik.Components.Pages;
+using Finansik.Service;
 
 public partial class NavBar : ContentView
 {
+  // TransatcionService ts = new TransatcionService();
 	public NavBar()
 	{
 		InitializeComponent();
