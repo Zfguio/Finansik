@@ -6,11 +6,31 @@
              Title="SummaryPage">
     <VerticalStackLayout BackgroundColor="#474F7A">
         <local:NavBar/>
-        <Label 
-            Text="Summry"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Ellipse />
-       
+
+        <Border Stroke="#81689D" StrokeThickness="1" BackgroundColor="#81689D" StrokeShape="RoundRectangle 10,10,10,10"
+         WidthRequest="450" Padding="2,8" HorizontalOptions="Center">
+            <StackLayout BackgroundColor="Transparent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Wydatki" Margin="15"></Label>
+                    <Label Text="Przychody" Margin="15" Grid.Row="1"></Label>
+                    <Label Text="Saldo" Margin="15" Grid.Row="2"></Label>
+
+                    <Label HorizontalTextAlignment="End" Grid.Column="1" Text="0zl" Margin="15"/>
+                    <Label HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1" Text="0zl" Margin="15"/>
+                    <Label HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="2" Text="0zl" Margin="15"/>
+                </Grid>
+            </StackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

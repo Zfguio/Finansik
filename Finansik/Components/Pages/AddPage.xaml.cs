@@ -49,7 +49,6 @@ public partial class AddPage : ContentPage
             await DisplayAlert("Z³a dane", "Zly format danych", "OK");
             return;
         }
-
         await TransatcionService.addTransatcion(title!, priceF, type!, descreption!);
         clearDataInputs();
     }
