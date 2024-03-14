@@ -11,10 +11,12 @@
             <StackLayout BackgroundColor="Transparent">
                 <!--><Line X1="0" X2="500" Stroke="Blue"></Line>-->
                 <StackLayout HorizontalOptions="Center"><Label FontSize="30">Dodaj</Label></StackLayout>
-                <Entry Placeholder="Tytuł" PlaceholderColor="Bisque" Margin="5"/>
-                <Entry Placeholder="Cena" PlaceholderColor="Bisque" Margin="5"/>
+                
+                <Entry x:Name="TbTytul" Placeholder="Tytuł" PlaceholderColor="Bisque" Margin="5" TextChanged="TbTytul_TextChanged"/>
+                <Entry x:Name="TbCena" Placeholder="Cena" PlaceholderColor="Bisque" Margin="5" TextChanged="TbCena_TextChanged"/>
+                
                 <Picker x:Name="picker" Margin="5"
-                    Title="Rodzaj tranzakcji">
+                    Title="Rodzaj tranzakcji" TitleColor="Bisque" TextColor="Bisque">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Przychód</x:String>
@@ -22,7 +24,9 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Entry Placeholder="Opis" PlaceholderColor="Bisque" Margin="5"/>
+                <Entry x:Name="tbOpis" Placeholder="Opis" PlaceholderColor="Bisque" Margin="5" TextChanged="tbOpis_TextChanged"/>
+
+                <Button Text="Wyslij" Clicked="Button_Clicked" Margin="5"/>
             </StackLayout>
         </Border>
     </VerticalStackLayout>
