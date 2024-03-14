@@ -11,7 +11,8 @@ namespace Finansik
         public MainPage()
         {
             InitializeComponent();
-            TransatcionService.addTransatcion("yep", 2f, "wychod");
+            //TransatcionService.addTransatcion("yep2", 2f, "wychod"); dodaje tabele
+            TransatcionService.GetList();
         }
     }
 }

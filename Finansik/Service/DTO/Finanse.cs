@@ -1,7 +1,7 @@
 ﻿using SQLite;
 namespace Finansik.Service.DTO
 {
-    class Transatcion
+    class Finanse
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; } 

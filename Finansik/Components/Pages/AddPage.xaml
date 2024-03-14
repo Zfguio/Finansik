@@ -6,9 +6,24 @@
              Title="AddPage">
     <VerticalStackLayout BackgroundColor="#474F7A">
         <local:NavBar/>
-        <Label 
-            Text="ADD"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Border Stroke="#81689D" StrokeThickness="1" BackgroundColor="#81689D" StrokeShape="RoundRectangle 10,10,10,10"
+         WidthRequest="250" Padding="2,8" HorizontalOptions="Center">
+            <StackLayout BackgroundColor="Transparent">
+                <!--><Line X1="0" X2="500" Stroke="Blue"></Line>-->
+                <StackLayout HorizontalOptions="Center"><Label FontSize="30">Dodaj</Label></StackLayout>
+                <Entry Placeholder="Tytuł" PlaceholderColor="Bisque" Margin="5"/>
+                <Entry Placeholder="Cena" PlaceholderColor="Bisque" Margin="5"/>
+                <Picker x:Name="picker" Margin="5"
+                    Title="Rodzaj tranzakcji">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Przychód</x:String>
+                            <x:String>Wydatek</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry Placeholder="Opis" PlaceholderColor="Bisque" Margin="5"/>
+            </StackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
