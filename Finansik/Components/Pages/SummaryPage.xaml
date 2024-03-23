@@ -21,6 +21,7 @@
                         <ColumnDefinition />
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                   
 
                     <Label Text="Wydatki" Margin="15"></Label>
                     <Label Text="Przychody" Margin="15" Grid.Row="1"></Label>

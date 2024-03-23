@@ -6,9 +6,17 @@
              Title="HistoryPage">
     <VerticalStackLayout BackgroundColor="#474F7A">
         <local:NavBar/>
-        <Label 
-            Text="History"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Border Stroke="#81689D" StrokeThickness="1" BackgroundColor="#81689D" StrokeShape="RoundRectangle 10,10,10,10"
+         WidthRequest="450" Padding="2,8" HorizontalOptions="Center">
+            <StackLayout BackgroundColor="Transparent">
+                <ListView x:Name="FruitListView" ItemsSource="{Binding Fruits}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Title}" Detail="{Binding Price}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
