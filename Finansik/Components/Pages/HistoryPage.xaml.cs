@@ -1,19 +1,13 @@
-using Finansik.Classes;
 using Finansik.Service;
 using Finansik.Service.DTO;
 using System.Collections.ObjectModel;
-using Finansik.Service.DTO;
 namespace Finansik.Components.Pages;
  
 public partial class HistoryPage : ContentPage
 {
-    public class Fruit
-    {
-        public string FruitName { get; set; }
-    }
     List<Finanse> finanses = new List<Finanse>();
-    ObservableCollection<Finanse> fruits = new ObservableCollection<Finanse>();
-    public ObservableCollection<Finanse> Fruits { get { return fruits; } }
+    ObservableCollection<Finanse> _finanses = new ObservableCollection<Finanse>();
+    public ObservableCollection<Finanse> Finanses { get { return _finanses; } }
 
     public HistoryPage()
 	{
@@ -25,9 +19,9 @@ public partial class HistoryPage : ContentPage
     {
         foreach (Finanse f in finanses)
         {
-            fruits.Add(AddFinanse(f.Title, f.Price));
+            _finanses.Add(AddFinanse(f.Title, f.Price));
         }
-        FruitListView.ItemsSource = fruits;
+        FruitListView.ItemsSource = _finanses;
     }
     async void  loadTable() 
     {

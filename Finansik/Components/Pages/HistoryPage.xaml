@@ -9,7 +9,7 @@
         <Border Stroke="#81689D" StrokeThickness="1" BackgroundColor="#81689D" StrokeShape="RoundRectangle 10,10,10,10"
          WidthRequest="450" Padding="2,8" HorizontalOptions="Center">
             <StackLayout BackgroundColor="Transparent">
-                <ListView x:Name="FruitListView" ItemsSource="{Binding Fruits}">
+                <ListView x:Name="FruitListView" ItemsSource="{Binding Finanses}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Title}" Detail="{Binding Price}" />
