@@ -28,7 +28,7 @@ namespace Finansik.Service
             await db.InsertAsync(transatcion);
         }
 
-        static public async Task addTransatcion(string title, float price, string type , string descreption)
+        static public async Task addTransatcion(string title, float price, string type, string descreption)
         {
             await init();
             var transatcion = new Finanse
@@ -40,7 +40,7 @@ namespace Finansik.Service
             };
             await db.InsertAsync(transatcion);
         }
-        static public async Task<int> GetList() 
+        static public async Task<int> GetList()
         {
             await init();
             //    List<Transatcion> query =await db.Table<Transatcion>().ToListAsync();
@@ -50,10 +50,22 @@ namespace Finansik.Service
             var count = await db.ExecuteScalarAsync<int>("select count(*) from Finanse");
             return count;
         }
-        static public async Task<List<Finanse>> GetListAsync() 
+        static public async Task<List<Finanse>> GetListAsync()
         {
-            //List<Finanse> list = await db.Table<Finanse>().ToListAsync();
-            return await db.Table<Finanse>().ToListAsync(); 
+            init();
+            try
+            {
+                // Check if db is null
+                if (db == null)
+                {
+                    return null;
+                }
+                return await db.Table<Finanse>().ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

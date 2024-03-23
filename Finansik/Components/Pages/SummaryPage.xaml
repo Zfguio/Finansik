@@ -26,9 +26,9 @@
                     <Label Text="Przychody" Margin="15" Grid.Row="1"></Label>
                     <Label Text="Saldo" Margin="15" Grid.Row="2"></Label>
 
-                    <Label HorizontalTextAlignment="End" Grid.Column="1" Text="0zl" Margin="15"/>
-                    <Label HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1" Text="0zl" Margin="15"/>
-                    <Label HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="2" Text="0zl" Margin="15"/>
+                    <Label x:Name="lbWydatki" HorizontalTextAlignment="End" Grid.Column="1" Text="0zl" Margin="15"/>
+                    <Label x:Name="lbPrzychody" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1" Text="0zl" Margin="15"/>
+                    <Label x:Name="lbSuma"  HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="2" Text="0zl" Margin="15"/>
                 </Grid>
             </StackLayout>
         </Border>
