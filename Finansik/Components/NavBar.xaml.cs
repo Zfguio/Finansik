@@ -5,7 +5,6 @@ using Finansik.Service;
 
 public partial class NavBar : ContentView
 {
-  // TransatcionService ts = new TransatcionService();
 	public NavBar()
 	{
 		InitializeComponent();

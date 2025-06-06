@@ -12,8 +12,6 @@ namespace Finansik.Service
                 return;
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "DataBase.db");
             db = new SQLiteAsyncConnection(dbPath);
-            // C://Users//User//AppData//Local\\Packages\\com.companyname.finansik_9zz4h110yvjzm\\LocalState\\DataBase.db"
-            //C:\Users\User\AppData\Local\Packages\com.companyname.finansik_9zz4h110yvjzm\LocalState znalezienie tego syfu
             await db.CreateTableAsync<Finanse>();
         }
         static public async Task addTransatcion(string title, float price, string type)
@@ -43,8 +41,6 @@ namespace Finansik.Service
         static public async Task<int> GetList()
         {
             await init();
-            //    List<Transatcion> query =await db.Table<Transatcion>().ToListAsync();
-            //var list = await query.ToListAsync();
             List<Finanse> list = await db.Table<Finanse>().ToListAsync();
 
             var count = await db.ExecuteScalarAsync<int>("select count(*) from Finanse");
@@ -55,7 +51,6 @@ namespace Finansik.Service
             init();
             try
             {
-                // Check if db is null
                 if (db == null)
                 {
                     return null;
